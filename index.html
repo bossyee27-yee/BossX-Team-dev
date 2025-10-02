@@ -1717,49 +1717,49 @@
                             <h1 class="text-3xl font-bold text-amber-400 mb-6">Team Developer</h1>
                             <p class="text-gray-400 mb-8">Temui tim di balik BossX Crypto Exchange Platform.</p>
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                <!-- CEO Profile -->
+                                <!-- Owner Profile -->
                                 <div class="exchange-card p-6 text-center">
                                     <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-amber-500">
                                         <img src="https://i.ibb.co/gbVsGLy0/FB-IMG-1617237754232.jpg" alt="CEO" class="w-full h-full object-cover">
                                     </div>
-                                    <h3 class="text-xl font-bold text-white mb-2">Mr.Fery Muliawan</h3>
+                                    <h3 class="text-xl font-bold text-white mb-2">Fery Muliawan</h3>
                                     <p class="text-amber-400 mb-4">CEO (Chief Executive Officer)</p>
                                     <p class="text-gray-300">Pendiri dan visioner BossX, dengan pengalaman 10 tahun di industri crypto.</p>
                                 </div>
-                                <!-- CFO Profile -->
+                                <!-- Director Profile -->
                                 <div class="exchange-card p-6 text-center">
                                     <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-amber-500">
                                         <img src="https://via.placeholder.com/150?text=Director" alt="Director" class="w-full h-full object-cover">
                                     </div>
-                                    <h3 class="text-xl font-bold text-white mb-2">Ms.Herni</h3>
-                                    <p class="text-amber-400 mb-4">CFO (Chief Financial Officer)</p>
+                                    <h3 class="text-xl font-bold text-white mb-2">apa yang bagus</h3>
+                                    <p class="text-amber-400 mb-4">Director</p>
                                     <p class="text-gray-300">Mengawasi operasi harian dan strategi bisnis platform.</p>
                                 </div>
-                                <!-- COO Profile -->
+                                <!-- Manager Profile -->
                                 <div class="exchange-card p-6 text-center">
                                     <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-amber-500">
-                                        <img src="https://via.placeholder.com/150?text=Manager" alt="Manager" class="w-full h-full object-cover">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fYngAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADh0RVh0U29mdHdhcmUAbWF0aGVtYXRpY2EgUGFpbnQgOC4wICgxMDI0KQCHB5gAAAABJRU5ErkJggg==" alt="Manager" class="w-full h-full object-cover">
                                     </div>
-                                    <h3 class="text-xl font-bold text-white mb-2">Mr.ramadhan</h3>
-                                    <p class="text-amber-400 mb-4">COO (Chief Operating Officer)</p>
+                                    <h3 class="text-xl font-bold text-white mb-2">Michael Johnson</h3>
+                                    <p class="text-amber-400 mb-4">Manager</p>
                                     <p class="text-gray-300">Mengatur tim operasional dan memastikan kelancaran platform.</p>
                                 </div>
-                                <!-- CTO Profile -->
+                                <!-- IT Profile -->
                                 <div class="exchange-card p-6 text-center">
                                     <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-amber-500">
-                                        <img src="https://ibb.co.com/N2RF70Vs" alt="IT" class="w-full h-full object-cover">
+                                        <img src="https://via.placeholder.com/150?text=IT" alt="IT" class="w-full h-full object-cover">
                                     </div>
-                                    <h3 class="text-xl font-bold text-white mb-2">Lee</h3>
-                                    <p class="text-amber-400 mb-4">CTO (Chief Technology Officer)</p>
+                                    <h3 class="text-xl font-bold text-white mb-2">Sarah Lee</h3>
+                                    <p class="text-amber-400 mb-4">IT Specialist</p>
                                     <p class="text-gray-300">Bertanggung jawab atas infrastruktur teknis dan keamanan sistem.</p>
                                 </div>
-                                <!-- CSO Profile -->
+                                <!-- Secretary Profile -->
                                 <div class="exchange-card p-6 text-center">
                                     <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-amber-500">
                                         <img src="https://via.placeholder.com/150?text=Secretary" alt="Secretary" class="w-full h-full object-cover">
                                     </div>
                                     <h3 class="text-xl font-bold text-white mb-2">Emily Brown</h3>
-                                    <p class="text-amber-400 mb-4">CSO (Chief Strategy Officer)</p>
+                                    <p class="text-amber-400 mb-4">Secretary</p>
                                     <p class="text-gray-300">Menangani administrasi dan komunikasi internal tim.</p>
                                 </div>
                             </div>
@@ -3245,7 +3245,7 @@
             });
         }
         function loadRecentTrades(symbol) {
-            const wsTrades = new WebSocket(`wss://stream.binance.com:9443/ws/${symbol.toLowerCase()}@trade`);
+            const wsTrades = new WebSocket(`wss://stream.binance.com:9443/ws/ws/${symbol.toLowerCase()}@trade`);
             wsTrades.onmessage = function(event) {
                 const data = JSON.parse(event.data);
                 addRecentTrade(data);
@@ -3301,7 +3301,7 @@
                 } else {
                     sidebar.classList.add('collapsed');
                     logoText.style.display = 'none';
-                    menuTexts.forEach(text => text.style.display = 'none');
+                    menuTexts.forEach(text => text.style.display = 'none';
                     toggleIcon.setAttribute('data-lucide', 'chevron-right');
                 }
                 lucide.createIcons();

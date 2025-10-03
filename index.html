@@ -1935,12 +1935,7 @@
                     </div>
                     <!-- Internal Market Page (Exchange) -->
                     <div id="exchange-page" class="page-content exchange-bg">
-                        <div class="exchange-card p-4 mb-4 relative overflow-hidden">
-                            <!-- Border Lines White -->
-                            <div class="border-line-white border-top-white"></div>
-                            <div class="border-line-white border-right-white"></div>
-                            <div class="border-line-white border-bottom-white"></div>
-                            <div class="border-line-white border-left-white"></div>
+                        <div class="exchange-card p-4 mb-4">
                             <h1 class="text-3xl font-bold text-amber-400 mb-2 flex items-center">
                                 <i data-lucide="dollar-sign" class="w-8 h-8 mr-2"></i>
                                 Internal Market - BossX
@@ -1948,12 +1943,7 @@
                             <p class="text-gray-400 mb-4">Trade cryptocurrency with Binance-like interface and real data.</p>
                         </div>
                         <!-- Pair Selector and Market Data (Binance-style top bar) -->
-                        <div class="exchange-card p-4 mb-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative overflow-hidden">
-                            <!-- Border Lines White -->
-                            <div class="border-line-white border-top-white"></div>
-                            <div class="border-line-white border-right-white"></div>
-                            <div class="border-line-white border-bottom-white"></div>
-                            <div class="border-line-white border-left-white"></div>
+                        <div class="exchange-card p-4 mb-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                             <div>
                                 <h2 class="text-lg font-bold text-white mb-2">Trading Pairs</h2>
                                 <div class="flex flex-row flex-wrap gap-2 overflow-x-auto">
@@ -1985,12 +1975,7 @@
                         <!-- Main Trading Area (Binance-like Grid) -->
                         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4" style="height: 90vh;">
                             <!-- Center: Large Chart -->
-                            <div class="exchange-card p-4 col-span-3 relative overflow-hidden">
-                                <!-- Border Lines White -->
-                                <div class="border-line-white border-top-white"></div>
-                                <div class="border-line-white border-right-white"></div>
-                                <div class="border-line-white border-bottom-white"></div>
-                                <div class="border-line-white border-left-white"></div>
+                            <div class="exchange-card p-4 col-span-3">
                                 <h2 class="text-lg font-bold text-white mb-4 flex items-center">
                                     <i data-lucide="trending-up" class="w-5 h-5 mr-2 text-amber-400"></i>
                                     Price Chart
@@ -2000,12 +1985,7 @@
                                 </div>
                             </div>
                             <!-- Order Book Buy (Left below chart) -->
-                            <div class="exchange-card p-4 col-span-1 lg:col-span-1.5 relative overflow-hidden">
-                                <!-- Border Lines White -->
-                                <div class="border-line-white border-top-white"></div>
-                                <div class="border-line-white border-right-white"></div>
-                                <div class="border-line-white border-bottom-white"></div>
-                                <div class="border-line-white border-left-white"></div>
+                            <div class="exchange-card p-4 col-span-1 lg:col-span-1.5">
                                 <h2 class="text-lg font-bold text-white mb-4 flex items-center">
                                     <i data-lucide="book-open" class="w-5 h-5 mr-2 text-amber-400"></i>
                                     Buy Orders
@@ -2027,12 +2007,7 @@
                                 </div>
                             </div>
                             <!-- Order Book Sell (Right below chart) -->
-                            <div class="exchange-card p-4 col-span-1 lg:col-span-1.5 relative overflow-hidden">
-                                <!-- Border Lines White -->
-                                <div class="border-line-white border-top-white"></div>
-                                <div class="border-line-white border-right-white"></div>
-                                <div class="border-line-white border-bottom-white"></div>
-                                <div class="border-line-white border-left-white"></div>
+                            <div class="exchange-card p-4 col-span-1 lg:col-span-1.5">
                                 <h2 class="text-lg font-bold text-white mb-4 flex items-center">
                                     <i data-lucide="book-open" class="w-5 h-5 mr-2 text-amber-400"></i>
                                     Sell Orders
@@ -2055,12 +2030,7 @@
                                 <div id="spread">Spread: Loading...</div>
                             </div>
                             <!-- Trade Section -->
-                            <div class="exchange-card p-4 col-span-3 relative overflow-hidden">
-                                <!-- Border Lines White -->
-                                <div class="border-line-white border-top-white"></div>
-                                <div class="border-line-white border-right-white"></div>
-                                <div class="border-line-white border-bottom-white"></div>
-                                <div class="border-line-white border-left-white"></div>
+                            <div class="exchange-card p-4 col-span-3">
                                 <h2 class="text-lg font-bold text-white mb-4 flex items-center">
                                     <i data-lucide="shopping-cart" class="w-5 h-5 mr-2 text-amber-400"></i>
                                     Trade
@@ -3403,7 +3373,7 @@
                 } else {
                     sidebar.classList.add('collapsed');
                     logoText.style.display = 'none';
-                    menuTexts.forEach(text => text.style.display = 'none';
+                    menuTexts.forEach(text => text.style.display = 'none');
                     toggleIcon.setAttribute('data-lucide', 'chevron-right');
                 }
                 lucide.createIcons();

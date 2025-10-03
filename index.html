@@ -3207,11 +3207,7 @@
         const debouncedLoadMarketData = debounce(loadMarketData, 300);
         function loadMarketData(pair) {
             const symbol = pair.replace('/', '');
-            // Ubah ke CORS proxy jika diperlukan (uncomment jika error CORS)
-            // const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-            // const apiUrl = proxyUrl + `https://api.binance.com/api/v3/ticker/24hr?symbol=${symbol}`;
-            const apiUrl = `https://api.binance.com/api/v3/ticker/24hr?symbol=${symbol}`;
-            fetch(apiUrl)
+            fetch(`https://api.binance.com/api/v3/ticker/24hr?symbol=${symbol}`)
                 .then(response => response.json())
                 .then(data => {
                     const changePercent = data.priceChangePercent > 0 ? `+${data.priceChangePercent.toFixed(2)}%` : `${data.priceChangePercent.toFixed(2)}%`;
@@ -3228,20 +3224,10 @@
                     localStorage.setItem('marketData', JSON.stringify(data)); // Cache
                 })
                 .catch(err => {
-                    console.error('Fetch error:', err); // Log detail error
-                    showErrorMessage('Gagal load data market. Menggunakan data cache.');
+                    console.error('Error fetching market data:', err);
                     const cachedData = JSON.parse(localStorage.getItem('marketData')) || {};
-                    // Fallback mock data jika cache kosong
-                    if (!cachedData.lastPrice) {
-                        cachedData = {
-                            lastPrice: 60000,
-                            priceChangePercent: 1.5,
-                            quoteVolume: 1000000000,
-                            highPrice: 61000,
-                            lowPrice: 59000
-                        };
-                    }
                     updateMarketData(cachedData.lastPrice || 0, cachedData.priceChangePercent || '+0.00%', cachedData.quoteVolume || 0, `${cachedData.highPrice || 0} / ${cachedData.lowPrice || 0}`);
+                    showErrorMessage('Gagal load data market. Menggunakan data cache.');
                 });
         }
         function updateMarketData(price, change, volume, highlow) {
@@ -3387,7 +3373,7 @@
                 } else {
                     sidebar.classList.add('collapsed');
                     logoText.style.display = 'none';
-                    menuTexts.forEach(text => text.style.display = 'none';
+                    menuTexts.forEach(text => text.style.display = 'none');
                     toggleIcon.setAttribute('data-lucide', 'chevron-right');
                 }
                 lucide.createIcons();
